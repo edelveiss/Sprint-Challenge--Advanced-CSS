@@ -22,8 +22,9 @@
   }
 
   .space-images {
-    display: flex;
-    flex-wrap: wrap;
+    .display-flex-wrap();
+    // display: flex;
+    // flex-wrap: wrap;
     width: 100%;
 
     img {
@@ -68,8 +69,7 @@
     justify-content: center;
 
     @media @phone{
-      display: flex;
-    
+      display: flex;    
     flex-direction: column-reverse;
     // justify-content: center;
     align-items: center;

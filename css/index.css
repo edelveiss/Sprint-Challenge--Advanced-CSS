@@ -140,7 +140,9 @@ body {
   font-family: 'Ubuntu', sans-serif;
   color: #5E6164;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 h1,
 h2,
@@ -227,6 +229,92 @@ header nav {
     width: 500px;
   }
 }
+/*Navigation section*/
+header nav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  background-color: #F6F6F6;
+  height: 19vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 500px) {
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+  }
+}
+header nav .logo {
+  width: 30%;
+  margin-bottom: 1%;
+  padding-top: 2%;
+  text-align: center;
+}
+header nav .logo h1 {
+  font-size: 4rem;
+}
+@media (max-width: 500px) {
+  header nav .logo h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 500px) {
+  header nav .logo {
+    width: 50%;
+    margin: 2% 0;
+  }
+}
+header nav .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 1% 10%;
+  background: linear-gradient(135deg, #b4d9f2 10%, #61b8f2 63%, #3577a4 100%);
+}
+@media (max-width: 500px) {
+  header nav .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+header nav .nav-links a {
+  width: 17%;
+  color: #0b12de;
+  font-size: 1.8rem;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  padding: 1% 1%;
+}
+@media (max-width: 500px) {
+  header nav .nav-links a {
+    width: 20%;
+    padding: 0.1%;
+  }
+}
+header nav .nav-links a:hover {
+  color: white;
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), #156cee);
+  border-radius: 5px;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+}
+/*End  of navigation*/
 footer {
   color: #22283B;
   background: #f4f4f4;

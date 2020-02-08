@@ -1,1 +1,104 @@
 // Navigation code here
+
+// Navigation Styles here
+
+/*Navigation section*/
+
+// header{
+//      background-color: @nav-bg;
+//     height: 15vh;
+// }
+
+header nav {    
+
+    overflow: hidden;
+    position: fixed;
+     top:0;
+     
+
+    background-color: @nav-bg;
+    height: 19vh;
+    
+    .custom-layout(center, center);
+    flex-direction: column; 
+    //  margin-top: 2%;   
+          
+	 @media @phone{
+             .custom-layout(center, center);  
+             flex-direction: column;          
+              // margin: 2% 0;
+              margin-bottom: 2%;
+	  }//this closes @media @mobile inside of the header nav
+
+
+	.logo {
+        // width: 38%;
+        width: 30%;
+        margin-bottom: 1%;
+        padding-top: 2%;
+        text-align: center;
+        
+        
+        h1{
+            font-size: 4rem;
+            @media @phone{
+                 font-size: 3rem; 
+                
+            }
+        }
+
+		@media @phone {
+            width: 50%;
+            // width: 100%;
+            margin: 2% 0;
+		}//this closes @media @mobile inside of the logo
+
+	}//this closes .logo
+
+	.nav-links {
+		.custom-layout(flex-end, center);
+                width: 100%;        
+                padding: 1% 10%;
+                //background: #1C6EA4;
+
+// background: linear-gradient(135deg, rgb(180, 217, 242) 10%, rgb(97, 184, 242) 63%, rgb(53, 119, 164) 100%);
+background: @link-bg;
+
+				@media @phone {
+					.custom-layout(space-around, center);
+                            width: 100%;
+                            padding-left: 3%;
+                            padding-right: 3%;
+				}//this closes @media @mobile inside of the nav-links
+
+
+		 a {
+			width: 17%;
+			.custom-a(@nav-font, 1.8rem, none);
+            text-align: center;
+            font-weight: bold;
+            padding: 1% 1%;
+            @media @phone{
+                width: 20%;
+                padding: 0.1%;
+            }
+
+            &:hover {
+               
+                color: white;
+
+                background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(21, 108, 238));
+
+                border-radius: 5px;
+                border-bottom-right-radius: 50%;
+                 border-top-right-radius: 50%;
+                
+              }
+
+            
+
+		}//this closes a
+	}//this closes .nav-links
+}//this closes header nav
+
+/*End  of navigation*/
