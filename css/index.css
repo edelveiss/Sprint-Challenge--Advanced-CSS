@@ -224,11 +224,6 @@ header nav {
     width: 500px;
   }
 }
-@media (max-width: 500px) {
-  footer {
-    width: 500px;
-  }
-}
 /*Navigation section*/
 header nav {
   overflow: hidden;
@@ -322,8 +317,15 @@ footer {
   border: 1px double #e0e0e0;
   border-radius: 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 3%;
+}
+@media (max-width: 500px) {
+  footer {
+    width: 500px;
+  }
 }
 .home .intro h2 {
   padding: 1.7%;
@@ -417,6 +419,7 @@ footer {
   background-color: #17adac;
   color: red;
   font-weight: bolder;
+  opacity: 0.8;
 }
 .home .walk .walk-text .btn:active {
   background-color: #17adac;
@@ -444,6 +447,7 @@ footer {
     background-color: #117a8b;
     color: red;
     font-weight: bolder;
+    opacity: 0.8;
   }
   .home .walk .walk-text .btn:active {
     background-color: #117a8b;
