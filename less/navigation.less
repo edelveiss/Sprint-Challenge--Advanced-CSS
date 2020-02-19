@@ -1,1 +1,94 @@
 // Navigation code here
+
+// Navigation Styles here
+
+/*Navigation section*/
+
+// header{
+//      background-color: @nav-bg;
+//     height: 15vh;
+// }
+
+header nav {    
+
+    overflow: hidden;
+    position: fixed;
+     top:0;
+     
+
+    background-color: @nav-bg;
+    height: 19vh;
+    
+    .custom-layout(center, center);
+    flex-direction: column;    
+          
+	 @media @phone{
+             .custom-layout(center, center);  
+             flex-direction: column;          
+              margin-bottom: 2%;
+	  }//this closes @media @mobile inside of the header nav
+
+
+	.logo {
+        width: 30%;
+        margin-bottom: 1%;
+        padding-top: 2%;
+        text-align: center;
+        
+        
+        h1{
+            font-size: 4rem;
+            @media @phone{
+            font-size: 3rem; 
+                
+            }//closes h1 inside of the logo
+        }
+
+		@media @phone {
+            width: 50%;
+            margin: 2% 0;
+		}//this closes @media @mobile inside of the logo
+
+	}//this closes .logo
+
+	.nav-links {
+		.custom-layout(flex-end, center);
+                width: 100%;        
+                padding: 1% 10%;               
+                background: @link-bg;
+
+				@media @phone {
+					.custom-layout(space-around, center);
+                            width: 100%;
+                            padding-left: 3%;
+                            padding-right: 3%;
+				}//this closes @media @mobile inside of the nav-links
+
+
+		 a {
+			width: 17%;
+			.custom-a(@nav-font, 1.8rem, none);
+            text-align: center;
+            font-weight: bold;
+            padding: 1% 1%;
+            @media @phone{
+                width: 20%;
+                padding: 0.1%;
+            }//closes @media of a inside of the nav-links
+
+            &:hover {
+               
+                color: white;
+                background-image: @link-bg-hover;
+                border-radius: 5px;
+                border-bottom-right-radius: 50%;
+                 border-top-right-radius: 50%;              
+              }//closes hover inside of the nav-links
+
+            
+
+		}//this closes a
+	}//this closes .nav-links
+}//this closes header nav
+
+/*End  of navigation*/

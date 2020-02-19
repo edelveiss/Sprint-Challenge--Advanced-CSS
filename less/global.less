@@ -1,6 +1,9 @@
 // General Styles
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
 }
 
 html {
@@ -10,6 +13,8 @@ html {
 html, body {
   font-family: 'Ubuntu', sans-serif;
   color: @main-font-color;
+
+  .custom-layout(center,center);
 }
 
 h1, h2, h3, h4, h5 {
@@ -29,10 +34,71 @@ p {
   font-size: 1.6rem;
   line-height: 1.4;
 }
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.scroller {
+  margin: 0 auto;
+  width: 980px;  
+  overflow: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+ 
+
+  @media @phone {
+    width: 500px;
+    max-width: 500px;
+    border: hidden;
+    width: 100%;
+  }
+}
+
+.bodyWrapper {
+  max-width: 1010px;
+  width: 1010px;
+  margin: 0 auto;
+
+  @media @phone {
+    width: 500px;
+    max-width: 500px;
+  }
+}
+header nav{
+     max-width: 980px;
+     width: 100%;
+     margin: 0 auto; 
+
+     @media @phone {
+      width: 500px;
+      max-width: 500px;
+    }
+}
+
 
 .container {
   max-width: 800px;
   width: 100%;
-  margin: 0 auto;  
+  margin: 0 auto; 
+
+  @media @phone {
+    width: 460px;
+  } 
 }
+
+.img-showcase{
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto; 
+  margin-top:19vh;
+
+  @media @phone {
+    width: 500px;
+  } 
+
+}
+
+
+
 
